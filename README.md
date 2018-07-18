@@ -2,7 +2,10 @@
 
 <img src="https://github.com/fperdigon/ECG-BaseLineWander-Removal-Methods/blob/master/ecg_image.png" width="300">
 
-This repository contains:
+This repository contains the implementation of several baseline wander removals methods for ECG signals. Also contains the implementation of similarity metrics and some utilitary funtions for ECG preccessing.
+The Matlab language was used.
+
+Files description
 BLremover.m (9 methods for Base Line Wander removal)
 - Based on Cubic SPlines
 - Based on FIR filters
