@@ -1,4 +1,7 @@
 # BaseLineWander_Removal_Methods
+
+<img src="https://github.com/fperdigon/ECG-BaseLineWander-Removal-Methods/blob/master/ecg_image.png" width="300">
+
 This repository contains:
 BLremover.m (9 methods for Base Line Wander removal)
 - Based on Cubic SPlines
