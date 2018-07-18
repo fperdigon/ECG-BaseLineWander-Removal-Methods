@@ -6,7 +6,7 @@
 %  - Percentage Root-Mean-Square Difference Metric (PRD)
 %
 %
-%  All these methods were programed according the literature information.
+%  All these methods were programmed according the literature information.
 %  The reference to these papers appear in the header information of each method
 %
 %  Author: Francisco Perdigon Romero
