@@ -41,18 +41,25 @@ utilECG.m (Several ECG tools)
 
 When citing this work please use this BibTeX entry:
 
-@article{Romero2018,
-title = {{Baseline wander removal methods for ECG signals: A comparative study}},
-archivePrefix = {arXiv},
-arxivId = {1807.11359},
-author = {Romero, Francisco Perdig{\'{o}}n and Romaguera, Liset V{\'{a}}zquez and V{\'{a}}zquez-Seisdedos, Carlos Rom{\'{a}}n and Filho, C{\'{i}}cero Ferreira Fernandes Costa and Costa, Marly Guimar{\~{a}}es Fernandes and Neto, Jo{\~{a}}o Evangelista},
-eprint = {1807.11359},
-month = {jul},
-url = {http://arxiv.org/abs/1807.11359},
-year = {2018}
-}
+    @article{Romero2018,
+    title = {{Baseline wander removal methods for ECG signals: A comparative study}},
+    archivePrefix = {arXiv},
+    arxivId = {1807.11359},
+    author = {Romero, Francisco Perdig{\'{o}}n and Romaguera, Liset V{\'{a}}zquez and V{\'{a}}zquez-Seisdedos, Carlos Rom{\'{a}}n and Filho, C{\'{i}}cero Ferreira Fernandes Costa and Costa, Marly Guimar{\~{a}}es Fernandes and Neto, Jo{\~{a}}o Evangelista},
+    eprint = {1807.11359},
+    month = {jul},
+    url = {http://arxiv.org/abs/1807.11359},
+    year = {2018}
+    }
 
- 
-MIT License
+## License 
+
+The MIT License (MIT)
 
 Copyright (c) 2018 Francisco Perdigon Romero
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
