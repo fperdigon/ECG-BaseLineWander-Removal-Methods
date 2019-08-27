@@ -253,7 +253,7 @@ function [ECG_Clean] = FIRRemoveBL(ecgy,Fs,Fc)
 %  email: fperdigon88@gmail.com
 
 
-    fcuts = [(Fc-0.07) (F)];
+    fcuts = [(Fc-0.07) (Fc)];
     mags = [0 1];
     devs = [0.005 0.001];
 
