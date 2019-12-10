@@ -119,9 +119,12 @@ function [ECG_Clean] = ICARemoveBL_v2(ecgy)
 %  Reference:
 %  Barati Z, Ayatollahi A. Baseline Wandering Removal by Using Independent Component
 %  Analysis to Single-Channel ECG data. 2006 Int Conf Biomed Pharm Eng. 2006;(1):152–6.
+%  
+%  FastICA source code and install:
+%  http://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml
 %
-% This version of the implementation implementa a bias automatic removal (do not affect the signal shape)
-% This version is the used for the comparative estudy
+%  This version of the implementation implementa a bias automatic removal (do not affect the signal shape)
+%  This version is the used for the comparative estudy
 %
 %  implemented by: Francisco Perdigon Romero
 %  email: fperdigon88@gmail.com
@@ -268,6 +271,8 @@ end
 function [ECG_Clean] = EMDRemoveBL(ecgy,Fs, Fc)
 %  BLW removal method based on Empirical Mode Decomposition
 %  EMD toolbox developed by Rilling and Flandrin.
+%
+%  EMD library source code and install:
 %  http://perso.ens-lyon.fr/patrick.flandrin/emd.html
 %
 %  ecgy:        the contamined signal
