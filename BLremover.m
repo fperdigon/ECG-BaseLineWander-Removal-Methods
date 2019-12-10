@@ -72,6 +72,9 @@ function [ECG_Clean] = ICARemoveBL(ecgy)
 %
 %  ecgy:        the contamined signal
 %  ECG_Clean :  processed signal without BLW
+%  
+%  FastICA source code and install:
+%  http://research.ics.aalto.fi/ica/fastica/code/dlcode.shtml
 %
 %  Reference:
 %  Barati Z, Ayatollahi A. Baseline Wandering Removal by Using Independent Component
