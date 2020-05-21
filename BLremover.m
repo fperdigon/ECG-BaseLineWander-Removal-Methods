@@ -392,7 +392,7 @@ end
 
 function [ECG_Clean] = ISSMRemoveBL(ecgy,Fs,Fc)
 %  BLW removal method based on interpolation and successive
-%  subtraction of median values in RR interval
+%  subtraction of median values in RR intervals
 %
 %  ecgy:        the contamined signal
 %  Fc:          cut-off frequency
@@ -407,21 +407,30 @@ function [ECG_Clean] = ISSMRemoveBL(ecgy,Fs,Fc)
 %  implemented by: Francisco Perdigon Romero
 %  email: fperdigon88@gmail.com
 
+    % Import utilECG resources
+    uE = utilECG;
+    [serieRRx,serieRRy] = uE.detectRPeaks_FDeriv(ecgy);
+    
     N = max(size(ecgy));
-    m = ceil(Fs/(2*Fc));
-    if (mod(m,2) == 0)
-        m = m + 1;
-    end
-    r = (m - 1) / 2;
+    
     y = zeros(1,N);
-
-    for n=(r+1):(N-r)
-         y(n) = median(ecgy(n-r:n+r));
-
+    
+    % On the original paper authors dont stablish a number if iterations or a stop criteria,
+    % we set the number of iterations = 100, then stop the algorithm
+    iterations = 100;
+    for iter=1:iterations  
+        % Fill y values from elemt 1 up to first R peak
+        tempRR_size = serieRRx(n) - 1 
+        y(1 : serieRRx(n + 1)) = ones(1, tempRR_size) * median(ecgy(1 : serieRRx(n));
+        
+        % Filly values for the rest of the signal lengt using median values between RR intervals
+        for n=1:(size(serieRRx) -1)
+            tempRR_size = serieRRx(n + 1) - serieRRx(n)
+            y(serieRRx(n) : serieRRx(n + 1)) = ones(1,tempRR_size) * median(ecgy(serieRRx(n) : serieRRx(n + 1));
+        end
+        % Substract the estimated BLW to the signal
+        ECG_Clean = ecgy - y'
     end
-
-    ECG_Clean = ecgy - y' ;
-
 end
 
 function [ECG_Clean] = FARemoveBL(ecgy,Fs)
