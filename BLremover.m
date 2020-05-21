@@ -51,7 +51,7 @@ function [ECG_Clean] = TWRemoveBL(ecgy, Fs, Fc)
 %  email: fperdigon88@gmail.com
 
     % Wavelet type
-    w='sym8';
+    w='sym10';
     % Threshold type
     thr_met='s';
 
