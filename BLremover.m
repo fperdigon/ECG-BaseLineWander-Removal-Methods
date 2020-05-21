@@ -228,16 +228,15 @@ function [ECG_Clean] = IIR_b_RemoveBL(ecgy,Fs,Fc)
 %  ECG_Clean :  processed signal without BLW
 %
 %  Reference:
-%  Pottala EW, Bailey JJ, Horton MR, Gradwohl JR. Suppression of baseline wander in the ECG
-%  Using a bilinearly transformed, null-phase filter. J Electrocardiol [Internet].
-%  1990 Jan [cited 2016 May 6];22:243–7.
+%  https://www.mathworks.com/help/signal/ref/butter.html
+%
 %  This variant use the Matlab butterword calculation coficients for a IIR filter
 %  the results were better that the original implementation of the paper
 %
 %  implemented by: Francisco Perdigon Romero
 %  email: fperdigon88@gmail.com
 
-    [b,a] = butter(4,Fc/Fs,'high');
+    [b,a] = butter(4,Fc/(Fs/2)),'high');
 
     ECG_Clean = filtfilt (b,a,ecgy); % filtrado bidirecional
 end
