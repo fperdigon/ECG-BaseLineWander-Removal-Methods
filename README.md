@@ -1,10 +1,17 @@
 # BaseLineWander Removal Methods
 
-<img src="https://github.com/fperdigon/ECG-BaseLineWander-Removal-Methods/blob/master/ecg_image.png" width="300">
+A follow-up and more recent work from our team in Baseline Wander Removal for ECG signals using Deep Learning and Python can be found in:
 
-This repository contains the implementation of several baseline wander removals methods for ECG signals. Also contains the implementation of similarity metrics and some utils funtions for ECG precessing.
+Codes: https://github.com/fperdigon/DeepFilter
 
-All these functions were implemented in MATLAB.
+Paper: https://www.sciencedirect.com/science/article/abs/pii/S1746809421005899
+
+
+<img src="ecg_image.png" width="300">
+
+This repository contains the implementation of several baseline wander removals methods for ECG signals. Also contains the implementation of similarity metrics and some utils funtions for ECG precessing. For more information please check our paper https://arxiv.org/pdf/1807.11359.pdf
+
+**This repository was implemented in MATLAB 2014a and it may not work with newer Matlab versions. No further maintenance will be given**
 
 All these methods were programmed according the literature information.
 The reference to these papers appear in the header information of each method.
