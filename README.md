@@ -40,6 +40,11 @@ utilECG.m (Several ECG tools)
 - Methods for filtering the ECG signal
 - Methods to add artificial noise (BLW, power line)
 
+## Results
+The following table present the quantitative results.
+
+![Result Table](Results_Table.png "Result Table")
+
 ## References
 
 - F. P. Romero, L. V. Romaguera, C. R. Vázquez-Seisdedos, C. F. F. C. Filho, M. G. F. Costa, and J. E. Neto, “Baseline wander removal methods for ECG signals: A comparative study,” Jul. 2018.
