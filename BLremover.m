@@ -255,19 +255,30 @@ function [ECG_Clean] = FIRRemoveBL(ecgy,Fs,Fc)
 %  1985 Dec [cited 2016 May 6];32(12):1052â€“60.
 %
 %  implemented by: Francisco Perdigon Romero
+%  modify by: David Castro Piñol 17/03/2020
+%       modification regarding the expansion of the signal to ensure the
+%       signal's length be greater than three times the filter order before
+%       using filtfilt function
+%
 %  email: fperdigon88@gmail.com
-
 
     fcuts = [(Fc-0.07) (Fc)];
     mags = [0 1];
     devs = [0.005 0.001];
+    len = length(ecgy);
 
     [n,Wn,beta,ftype] = kaiserord(fcuts,mags,devs,Fs);
-    %n = 28;
+    
     b = fir1(n,Wn,ftype,kaiser(n+1,beta),'noscale');
+    
+    if(n*3>length(ecgy))
+        diff = n*3 - length(ecgy);
+        ecgy = [ecgy;flip(ecgy);ecgy(1)*ones(diff,1)];
+    end
+       
     a = 1;
-
     ECG_Clean = filtfilt(b,a,ecgy);
+    ECG_Clean = ECG_Clean(1:len,1);
 end
 
 function [ECG_Clean] = EMDRemoveBL(ecgy,Fs, Fc)
